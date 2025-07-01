@@ -1,0 +1,45 @@
+
+
+
+<div class="container text-center mt-5 index-cards">
+  <h1>Bienvenido al Sistema de Gestión</h1>
+  <p>Selecciona un módulo para comenzar.</p>
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="card shadow-sm py-4">
+        <div class="card-body d-flex flex-column align-items-center">
+          <i class="bi bi-box-seam display-1 mb-3"></i>
+          <h5 class="card-title">Inventario</h5>
+          <p class="card-text">Gestiona productos en stock.</p>
+          <a routerLink="/inventario" class="btn btn-acceder w-100 mt-auto">Acceder</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm py-4">
+        <div class="card-body d-flex flex-column align-items-center">
+          <i class="bi bi-bar-chart-line display-1 mb-3"></i>
+          <h5 class="card-title">Reportes</h5>
+          <p class="card-text">Genera estadísticas y análisis de datos.</p>
+          <a routerLink="/reportes" class="btn btn-acceder w-100 mt-auto">Acceder</a>
+        </div>
+      </div>
+    </div>
+
+ <div class="col-md-4" *ngIf="perfil === 'administrador'">
+       <div class="card shadow-sm py-4">
+      <div class="card-body d-flex flex-column align-items-center">
+      <i class="bi bi-person-fill display-1 mb-3"></i>
+      <h5 class="card-title">Usuarios</h5>
+      <p class="card-text">Administra cuentas y permisos.</p>
+      <a routerLink="/usuarios" class="btn btn-acceder w-100 mt-auto">Acceder</a>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>

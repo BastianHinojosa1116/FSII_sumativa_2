@@ -1,0 +1,41 @@
+
+
+<div class="fondoLogin d-flex justify-content-center align-items-center vh-75">
+<div class="containerLogin d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow p-4 rounded" style="max-width: 400px; width: 100%;">
+    <h2 class="text-center mb-4">Bienvenido a SIRICAR</h2>
+    <h3 class="text-center mb-4">Iniciar sesión</h3>
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          placeholder="usuario@ejemplo.com"
+          required />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="********"
+          required />
+      </div>
+      <button type="submit" class="btn btn-dark w-100">Ingresar</button>
+    </form>
+
+    <div class="mt-3 text-center">
+      <a routerLink="/registro" class="text-dark me-3">Registrarse</a>
+      <a routerLink="/recuperar-clave" class="text-dark">¿Olvidaste tu contraseña?</a>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,57 @@
+<div class="fondoLogin d-flex justify-content-center align-items-center vh-75">
+  <div class="containerLogin d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow p-4 rounded" style="max-width: 400px; width: 100%;">
+      <h3 class="text-center mb-4">Restablecer contraseña</h3>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            class="form-control"
+            formControlName="correo"
+            placeholder="usuario@ejemplo.com"
+          />
+          <div *ngIf="form.get('correo')?.invalid && form.get('correo')?.touched" class="text-danger small">
+            Ingresa un correo válido.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="clave1" class="form-label">Nueva contraseña</label>
+          <input
+            type="password"
+            id="clave1"
+            class="form-control"
+            formControlName="clave1"
+            placeholder="********"
+          />
+          <div *ngIf="form.get('clave1')?.invalid && form.get('clave1')?.touched" class="text-danger small">
+            Mínimo 6 caracteres, una mayúscula, un número y un símbolo.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="clave2" class="form-label">Confirmar contraseña</label>
+          <input
+            type="password"
+            id="clave2"
+            class="form-control"
+            formControlName="clave2"
+            placeholder="********"
+          />
+          <div *ngIf="form.errors?.['mismatch'] && form.get('clave2')?.touched" class="text-danger small">
+            Las contraseñas no coinciden.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-dark w-100">Guardar nueva contraseña</button>
+      </form>
+
+      <div class="mt-3 text-center">
+        <a routerLink="/" class="text-muted">Volver al login</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.fondoLogin {
+  background-image: url('assets/images/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+
+  z-index: 0;
+}
+
+.navbar .nav-link {
+  color: white !important;
+}

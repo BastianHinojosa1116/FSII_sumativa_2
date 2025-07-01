@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Usuarios registrados</h2>
+    <button class="btn btn-success" (click)="agregarUsuario()">
+      <i class="bi bi-plus-circle"></i> Agregar Usuario
+    </button>
+  </div>
+
+  <div class="row">
+    <div
+      class="col-md-4 mb-4"
+      *ngFor="let user of usuarios; let i = index"
+    >
+      <div class="card text-center border-0 shadow-sm h-100 rounded-4">
+        <img
+          [src]="user.foto || 'assets/images/nofoto.png'"
+          class="user-img mx-auto mt-3 d-block rounded-circle"
+          style="width: 100px; height: 100px; object-fit: cover"
+          alt="Foto de {{ user.nombre }}"
+          (error)="user.foto = 'assets/images/nofoto.png'"
+        />
+        
+        <div class="card-body">
+          <h6 class="card-title mb-1">{{ user.nombre }} {{ user.apellido }}</h6>
+          <p class="text-muted small">
+            <i class="bi bi-envelope"></i> {{ user.correo }}
+          </p>
+
+         <div *ngIf="user.correo === 'ba.hinojosa@duocuc.cl'; else editablePerfil">
+  <p class="text-muted small mb-2">Administrador</p>
+</div>
+
+<ng-template #editablePerfil>
+  <select
+  class="form-select form-select-sm w-auto mx-auto mb-2"
+  [(ngModel)]="user.perfil"
+  (change)="cambiarPerfil(user, user.perfil)"
+>
+  <option>Usuario</option>
+  <option>Inventario</option>
+  <option>Ventas</option>
+</select>
+
+<button
+  class="btn btn-outline-danger btn-sm"
+  (click)="eliminar(i)"
+  title="Eliminar usuario"
+>
+  <i class="bi bi-trash3"></i>
+</button>
+<button
+  class="btn btn-outline-primary btn-sm me-2"
+  (click)="editar(i)"
+  title="Editar usuario"
+>
+  <i class="bi bi-pencil-square"></i>
+</button>
+
+
+</ng-template>
+
