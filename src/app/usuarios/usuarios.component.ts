@@ -2,30 +2,52 @@ import { Component, OnInit } from '@angular/core';
 import { UsuariosService, Usuario } from '../servicios/usuarios.service';
 import { AuthService, User } from '../servicios/auth.service';
 
+/**
+ * Componente para gestionar usuarios.
+ * Permite cargar, agregar, editar, eliminar usuarios y cambiar perfiles.
+ */
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
+  /** Lista de usuarios cargados para mostrar y editar */
   usuarios: Usuario[] = [];
 
+  /**
+   * Constructor que inyecta servicios de autenticación y usuarios.
+   * @param auth Servicio para autenticación y acceso a usuarios
+   * @param servicio Servicio para manejo persistente de usuarios
+   */
   constructor(
-  private auth: AuthService,
-  private servicio: UsuariosService // 
-) {}
+    private auth: AuthService,
+    private servicio: UsuariosService
+  ) {}
 
+  /**
+   * Ciclo de vida que se ejecuta al inicializar el componente.
+   * Carga la lista de usuarios.
+   */
   ngOnInit(): void {
     this.cargarUsuarios();
   }
 
+  /**
+   * Carga los usuarios desde el servicio y asegura que tengan la propiedad 'editable'.
+   */
   cargarUsuarios() {
-  this.usuarios = this.auth.getUsers().map(user => ({
-    ...user,
-    editable: user.editable ?? true // si editable está ausente, lo pone en true
-  }));
-}
+    this.usuarios = this.auth.getUsers().map(user => ({
+      ...user,
+      editable: user.editable ?? true // Si no tiene editable, por defecto true
+    }));
+  }
 
+  /**
+   * Permite agregar un nuevo usuario solicitando datos mediante prompts.
+   * Valida datos obligatorios y evita correos duplicados.
+   * Asigna perfil 'Administrador' al correo principal.
+   */
   agregarUsuario() {
     const nombre = prompt('Nombre:');
     const apellido = prompt('Apellido:');
@@ -66,6 +88,11 @@ export class UsuariosComponent implements OnInit {
     this.cargarUsuarios();
   }
 
+  /**
+   * Permite editar un usuario existente mediante prompts.
+   * Valida campos obligatorios, evita duplicados y protege al administrador principal.
+   * @param index Índice del usuario a editar en la lista
+   */
   editar(index: number) {
     const u = this.usuarios[index];
 
@@ -118,6 +145,10 @@ export class UsuariosComponent implements OnInit {
     this.cargarUsuarios();
   }
 
+  /**
+   * Elimina un usuario, previa confirmación y protegiendo al administrador principal.
+   * @param index Índice del usuario a eliminar en la lista
+   */
   eliminar(index: number) {
     const u = this.usuarios[index];
     if (u.correo === 'ba.hinojosa@duoc.cl') {
@@ -132,6 +163,12 @@ export class UsuariosComponent implements OnInit {
     }
   }
 
+  /**
+   * Cambia el perfil de un usuario excepto si es el administrador principal.
+   * Actualiza los usuarios persistidos y recarga la lista.
+   * @param usuario Usuario al que se cambiará el perfil
+   * @param nuevoPerfil Nuevo perfil a asignar
+   */
   cambiarPerfil(usuario: Usuario, nuevoPerfil: string) {
     if (usuario.correo === 'ba.hinojosa@duoc.cl') return;
     usuario.perfil = nuevoPerfil;

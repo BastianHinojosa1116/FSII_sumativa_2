@@ -94,7 +94,7 @@
                                     <a href="../components/LoginComponent.html" >LoginComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/RecuperarClaveComponent.html" >RecuperarClaveComponent</a>
+                                    <a href="../components/RecuperarClaveComponent.html"  class="active" >RecuperarClaveComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/RegistroComponent.html" >RegistroComponent</a>
@@ -155,7 +155,7 @@
                                     <a href="../interfaces/InventoryItem.html" >InventoryItem</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../interfaces/ReportItem.html"  class="active" >ReportItem</a>
+                                    <a href="../interfaces/ReportItem.html" >ReportItem</a>
                                 </li>
                                 <li class="link">
                                     <a href="../interfaces/User.html" >User</a>
@@ -263,7 +263,7 @@
                                            <a href="../components/LoginComponent.html" >LoginComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/RecuperarClaveComponent.html" >RecuperarClaveComponent</a>
+                                           <a href="../components/RecuperarClaveComponent.html"  class="active" >RecuperarClaveComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/RegistroComponent.html" >RegistroComponent</a>
@@ -324,7 +324,7 @@
                                            <a href="../interfaces/InventoryItem.html" >InventoryItem</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../interfaces/ReportItem.html"  class="active" >ReportItem</a>
+                                           <a href="../interfaces/ReportItem.html" >ReportItem</a>
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/User.html" >User</a>
@@ -352,182 +352,343 @@
                    
                    </nav>
                </div>
-               <div class="content interface">
+               <div class="content component">
                    <div class="content-data">
 
 
-
-
-
-
-
 <ol class="breadcrumb">
-  <li>Interfaces</li>
-  <li>ReportItem</li>
+  <li>Components</li>
+  <li>RecuperarClaveComponent</li>
 </ol>
 
-<ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
-    </li>
-    <li>
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
-    </li>
-</ul>
 
-<div class="tab-content">
-    <div class="tab-pane fade active in" id="infos">
-        <p class="comment">
-            <h3>File</h3>
-        </p>
-        <p class="comment">
-            <code>src/app/reportes/reportes.component.ts</code>
-        </p>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+        </li>
+        <li>
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+        </li>
+    </ul>
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Representa un ítem de reporte con nombre y total de cantidad.</p>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="infos"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/recuperar-clave/recuperar-clave.component.ts</code>
+</p>
 
-            </p>
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente para la recuperación y cambio de contraseña.<br>Permite ingresar correo y nueva clave con validación y confirmación.</p>
 
-
+    </p>
 
 
-            <section>
-                <h3 id="inputs">Properties</h3>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <b>nombre</b>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>nombre:     <code>string</code>
-</bcode>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code>string</code>
-
-                                        </td>
-                                    </tr>
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Nombre del producto o ítem </p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <b>total</b>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>total:     <code>number</code>
-</bcode>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code>number</code>
-
-                                        </td>
-                                    </tr>
 
 
 
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-description"><p>Cantidad total disponible </p>
-</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-            </section>
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-recuperar-clave</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>recuperar-clave.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>recuperar-clave.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor(fb: <a href="https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html" target="_blank" >FormBuilder</a>, auth: <a href="../injectables/AuthService.html" >AuthService</a>, router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank" >Router</a>)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Constructor que inyecta servicios necesarios para formularios, autenticación y navegación.</p>
     </div>
-    <div class="tab-pane fade tab-source-code" id="source">
-        <pre><code class="hljs javascript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { InventarioService, InventoryItem } from &#x27;../servicios/inventario.service&#x27;;
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <ul class="jsdoc-params">
+                                                <li>
+                                                    <div>
+                                                        <b>fb</b>
+                                                    </div>
+                                                    <div>
+                                                        <p>FormBuilder para construir el formulario reactivo</p>
+    
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <b>auth</b>
+                                                    </div>
+                                                    <div>
+                                                        <p>Servicio de autenticación para manejo de usuarios</p>
+    
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <b>router</b>
+                                                    </div>
+                                                    <div>
+                                                        <p>Servicio para navegar entre rutas</p>
+    
+                                                    </div>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        <h3 id="methods">Methods</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> passwordsMatch</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>passwordsMatch(group: any)</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Validador personalizado que verifica que las dos contraseñas coincidan.</p>
+    </div>
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <ul class="jsdoc-params">
+                                                <li>
+                                                    <div>
+                                                        <b>group</b>
+                                                    </div>
+                                                    <div>
+                                                        <p>Control abstracto del formulario</p>
+    
+                                                    </div>
+                                                </li>
+                                        </ul>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        <p>null si coinciden, objeto con error si no</p>
+    
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> onSubmit</b>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    <code>onSubmit()</code>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Maneja el envío del formulario para actualizar la contraseña.<br>Valida, busca el usuario y actualiza la contraseña en el servicio.<br>Navega a la página principal luego de éxito o alerta en caso de error.</p>
+    </div>
+                                <div class="io-description">
+                                    <b>Returns: </b>    <code>void</code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        <h3 id="inputs">Properties</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> form</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>form:     <code>boolean</code>
+    </bcode>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Formulario reactivo para recuperación de contraseña </p>
+    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <b> FormGroup</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>FormGroup:     <code>any</code>
+    </bcode>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+</div>
+        <div class="tab-pane fade tab-source-code" id="source">
+            <pre><code class="hljs javascript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { AuthService, User } from &#x27;../servicios/auth.service&#x27;;
+import { FormBuilder, FormGroup, Validators, AbstractControl } from &#x27;@angular/forms&#x27;;
 
 /**
- * Representa un ítem de reporte con nombre y total de cantidad.
- */
-interface ReportItem {
-  /** Nombre del producto o ítem */
-  nombre: string;
-  /** Cantidad total disponible */
-  total: number;
-}
-
-/**
- * Componente que genera y muestra reportes de inventario.
- * Permite filtrar los ítems del reporte por nombre.
+ * Componente para la recuperación y cambio de contraseña.
+ * Permite ingresar correo y nueva clave con validación y confirmación.
  */
 @Component({
-  selector: &#x27;app-reportes&#x27;,
-  templateUrl: &#x27;./reportes.component.html&#x27;,
-  styleUrls: [&#x27;./reportes.component.css&#x27;]
+  selector: &#x27;app-recuperar-clave&#x27;,
+  templateUrl: &#x27;./recuperar-clave.component.html&#x27;,
+  styleUrls: [&#x27;./recuperar-clave.component.css&#x27;]
 })
-export class ReportesComponent implements OnInit {
-  /** Lista de ítems para el reporte, con nombre y cantidad total */
-  reportItems: ReportItem[] &#x3D; [];
-
-  /** Término usado para filtrar los ítems del reporte */
-  searchTerm: string &#x3D; &#x27;&#x27;;
+export class RecuperarClaveComponent implements OnInit {
+  /** Formulario reactivo para recuperación de contraseña */
+  form!: FormGroup;
 
   /**
-   * Constructor que inyecta el servicio de inventario.
-   * @param invSvc Servicio que provee los datos del inventario
+   * Constructor que inyecta servicios necesarios para formularios, autenticación y navegación.
+   * @param fb FormBuilder para construir el formulario reactivo
+   * @param auth Servicio de autenticación para manejo de usuarios
+   * @param router Servicio para navegar entre rutas
    */
-  constructor(private invSvc: InventarioService) {}
+  constructor(
+    private fb: FormBuilder,
+    private auth: AuthService,
+    private router: Router
+  ) {}
 
   /**
-   * Método del ciclo de vida que se ejecuta al iniciar el componente.
-   * Carga los datos del inventario y los transforma en ítems de reporte.
+   * Inicializa el formulario con validaciones al iniciar el componente.
    */
-  ngOnInit(): void {
-    const inventory &#x3D; this.invSvc.getAll();
-    this.reportItems &#x3D; inventory.map(i &#x3D;&gt; ({
-      nombre: i.nombre,
-      total: i.cantidad
-    }));
+  ngOnInit() {
+    this.form &#x3D; this.fb.group({
+      correo: [&#x27;&#x27;, [Validators.required, Validators.email]],
+      clave1: [&#x27;&#x27;, [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.pattern(/(?&#x3D;.*[A-Z])(?&#x3D;.*\d)(?&#x3D;.*\W)/) // al menos una mayúscula, un número y un símbolo
+      ]],
+      clave2: [&#x27;&#x27;]
+    }, {
+      validators: this.passwordsMatch
+    });
   }
 
   /**
-   * Getter que devuelve los ítems de reporte filtrados según el término de búsqueda.
-   * Si no hay término, devuelve todos los ítems.
+   * Validador personalizado que verifica que las dos contraseñas coincidan.
+   * @param group Control abstracto del formulario
+   * @returns null si coinciden, objeto con error si no
    */
-  get filteredReportItems(): ReportItem[] {
-    const term &#x3D; this.searchTerm.toLowerCase().trim();
-    if (!term) {
-      return this.reportItems;
+  passwordsMatch(group: AbstractControl) {
+    const pass &#x3D; group.get(&#x27;clave1&#x27;)?.value;
+    const confirm &#x3D; group.get(&#x27;clave2&#x27;)?.value;
+    return pass &#x3D;&#x3D;&#x3D; confirm ? null : { mismatch: true };
+  }
+
+  /**
+   * Maneja el envío del formulario para actualizar la contraseña.
+   * Valida, busca el usuario y actualiza la contraseña en el servicio.
+   * Navega a la página principal luego de éxito o alerta en caso de error.
+   */
+  onSubmit() {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
     }
-    return this.reportItems.filter(r &#x3D;&gt;
-      r.nombre.toLowerCase().includes(term)
-    );
+
+    const { correo, clave1 } &#x3D; this.form.value;
+    const usuarios: User[] &#x3D; this.auth.getUsers();
+    const index &#x3D; usuarios.findIndex(u &#x3D;&gt; u.correo.trim().toLowerCase() &#x3D;&#x3D;&#x3D; correo.trim().toLowerCase());
+
+    if (index &#x3D;&#x3D;&#x3D; -1) {
+      alert(&#x27;No existe un usuario con ese correo.&#x27;);
+      return;
+    }
+
+    usuarios[index].contrasena &#x3D; clave1;
+    this.auth.setUsuarios(usuarios);
+
+    alert(&#x27;Contraseña actualizada correctamente.&#x27;);
+    this.router.navigate([&#x27;&#x27;]);
   }
 }
 </code></pre>
+        </div>
     </div>
-</div>
+
+
+
+
+
+
 
 
 
